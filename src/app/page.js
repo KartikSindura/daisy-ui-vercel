@@ -11,7 +11,7 @@ export default function Home() {
     <>
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
           {[...Array(10)].map((e, i) => {
-             const x = useMemo(() => (Math.random()), []);
+             let x = useMemo(() => (Math.random()), []);
             if (x < 0.33) {
               return <Item />;
             } else if (x > 0.33 && x < 0.66) {
