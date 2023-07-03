@@ -5,13 +5,14 @@ import Item2 from "./components/item2";
 import Item3 from "./components/item3";
 import NoSSR from "./components/NoSSR";
 import { useEffect, useState, useMemo } from "react";
+import BigItem from "./components/bigitem";
 
 export default function Home() {
   return (
     <>
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
-          {[...Array(10)].map((e, i) => {
-             let x = useMemo(() => (Math.random()), []);
+        <div className="p-12">
+          {/* {[...Array(10)].map((e, i) => {
+             let x = Math.random();
             if (x < 0.33) {
               return <Item />;
             } else if (x > 0.33 && x < 0.66) {
@@ -19,7 +20,8 @@ export default function Home() {
             } else {
               return <Item3 />;
             }
-          })}
+          })} */}
+          <BigItem />
         </div>
     </>
   );

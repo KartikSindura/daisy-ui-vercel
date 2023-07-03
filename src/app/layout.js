@@ -12,14 +12,14 @@ import "./globals.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-black min-h-screen'>
-        <div className="container mx-auto my-auto py-6">
+      <body className='bg-black min-h-screen mx-auto my-auto'>
+        <div>
           {/* <div className="grid grid-cols-3 gap-2"> */}
           {/* <div className="flex">
             <Navbar />
           </div> */}
           <div className="w-1/5"></div>
-          <div>{children}</div>
+          <div className="">{children}</div>
           <div className="w-1/5"></div>
         </div>
       </body>
