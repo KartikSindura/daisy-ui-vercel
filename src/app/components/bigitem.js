@@ -9,20 +9,20 @@ export default function BigItem() {
     }
     // let sw = screen.width
     // let sh = screen.height
-    let max = Math.max(screen.width, screen.height)
-    let n = 35
-    if (max >= 1024) {
-        n = 25
-    } else if (max > 768 && max < 1024) {
-        n = 18
-    } else {
-        n = 10
-    }
+    // let max = Math.max(screen.width, screen.height)
+    // let n = 35
+    // if (max >= 1024) {
+    //     n = 25
+    // } else if (max > 768 && max < 1024) {
+    //     n = 18
+    // } else {
+    //     n = 10
+    // }
 
     return (
   
       <div className="grid lg:grid-cols-10 md:grid-cols-6 sm:grid-cols-4 gap-x-2 gap-y-2 grid-flow-dense">
-        {[...Array(n)].map((e, i) => {
+        {[...Array(20)].map((e, i) => {
             let string = string_gen()
             return <input type="checkbox" className={string} key={i} />
         })}

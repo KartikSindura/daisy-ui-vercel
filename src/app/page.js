@@ -10,7 +10,7 @@ import BigItem from "./components/bigitem";
 export default function Home() {
   return (
     <>
-        <div className="p-12">
+        <div className="p-20">
           {/* {[...Array(10)].map((e, i) => {
              let x = Math.random();
             if (x < 0.33) {
