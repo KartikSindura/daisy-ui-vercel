@@ -1,10 +1,14 @@
+"use client"
+let count = 0;
 
 export default function BigItem() {
     function string_gen() {
         let options = ["col-span-2", "", "col-span-3", "row-span-3", "row-span-2", "col-span-2 row-span-2"]
         let base_string = "border-l-violet-700 border-2 h-full btn shadow-xl min-h-[80px] min-w-[80px] "
-        let x = Math.floor(Math.random()*8)
+        let x = Math.floor(Math.random()*options.length)
         let string = base_string.concat(options[x])
+        count++;
+        console.log(count);
         return string
     }
     // let sw = screen.width
