@@ -86,7 +86,7 @@ const items = [
 ];
 
 export default function Navbar() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(10);
   return (
     <div className="navbar bg-base-100 col-span-full">
       <div className="navbar-start">
