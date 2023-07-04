@@ -3,103 +3,54 @@ import { useState } from "react";
 import "../../layout";
 
 const items = [
-  {
-    icon: "",
-    theme: "light",
-  },
-  {
-    icon: "",
-    theme: "dark",
-  },
-  {
-    icon: "",
-    theme: "cupcake",
-  },
-  {
-    icon: "",
-    theme: "emerald",
-  },
-  {
-    icon: "",
-    theme: "corporate",
-  },
-  {
-    icon: "",
-    theme: "synthwave",
-  },
-  {
-    icon: "",
-    theme: "retro",
-  },
-  {
-    icon: "",
-    theme: "cyberpunk",
-  },
-  {
-    icon: "",
-    theme: "valentine",
-  },
-  {
-    icon: "",
-    theme: "halloween",
-  },
-  {
-    icon: "",
-    theme: "garden",
-  },
-  {
-    icon: "",
-    theme: "forest",
-  },
-  {
-    icon: "",
-    theme: "aqua",
-  },
-  {
-    icon: "",
-    theme: "lofi",
-  },
-  {
-    icon: "",
-    theme: "pastel",
-  },
-  {
-    icon: "",
-    theme: "fantasy",
-  },
-  {
-    icon: "",
-    theme: "wireframe",
-  },
-  {
-    icon: "",
-    theme: "black",
-  },
-  {
-    icon: "",
-    theme: "luxury",
-  },
-  {
-    icon: "",
-    theme: "dracula",
-  },
+  "light",
+  "dark",
+  "cupcake",
+  "bumblebee",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "retro",
+  "cyberpunk",
+  "valentine",
+  "halloween",
+  "garden",
+  "forest",
+  "aqua",
+  "lofi",
+  "pastel",
+  "fantasy",
+  "wireframe",
+  "black",
+  "luxury",
+  "dracula",
+  "cmyk",
+  "autumn",
+  "business",
+  "acid",
+  "lemonade",
+  "night",
+  "coffee",
+  "winter",
 ];
 
 export default function Navbar() {
   const [index, setIndex] = useState(10);
   return (
-    <div className="navbar bg-base-100 col-span-full">
-      <div className="navbar-start">
-        <div className="dropdown drop-shadow-2xl">
-          <label tabindex="0" class="btn btn-ghost btn-circle drop-shadow-2xl">
+        <div className="dropdown drop-shadow-2xl p-2">
+          <label
+            tabIndex="0"
+            className="btn btn-ghost btn-circle drop-shadow-2xl"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
               viewBox="0 0 24 24"
               stroke="currentColor"
               fill="none"
+              stroke-width="1.5"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M3 21v-4a4 4 0 1 1 4 4h-4" />
               <path d="M21 3a16 16 0 0 0 -12.8 10.2" />
               <path d="M21 3a16 16 0 0 1 -10.2 12.8" />
@@ -108,7 +59,7 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-2 z-[1] shadow bg-base-100 rounded-box w-96 max-h-96 overflow-scroll"
           >
             {[...Array(items.length)].map((e, i) => {
               return (
@@ -119,7 +70,7 @@ export default function Navbar() {
                     onClick={(f) => {
                       document
                         .getElementById("html")
-                        .setAttribute("data-theme", items[i].theme);
+                        .setAttribute("data-theme", items[i]);
                       document
                         .getElementById(index)
                         .setAttribute("class", "m-1");
@@ -129,15 +80,12 @@ export default function Navbar() {
                       setIndex(i);
                     }}
                   >
-                    {items[i].theme}
+                    {items[i]}
                   </a>
                 </li>
               );
             })}
           </ul>
-        </div>
-      </div>
-      {/* <div className="navbar-end"></div> */}
       <div className="navbar-center"></div>
       <div className="navbar-end"></div>
     </div>
