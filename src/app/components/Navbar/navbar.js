@@ -35,9 +35,9 @@ const items = [
 ];
 
 export default function Navbar() {
-  const [index, setIndex] = useState(10);
+  const [index, setIndex] = useState(0);  
   return (
-        <div className="dropdown drop-shadow-2xl p-2">
+        <div className="dropdown drop-shadow-2xl p-2" id="dropdown-menu" >
           <label
             tabIndex="0"
             className="btn btn-ghost btn-circle drop-shadow-2xl"
@@ -59,7 +59,7 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-2 z-[1] shadow bg-base-100 rounded-box w-96 max-h-96 overflow-scroll"
+            className="menu menu-sm dropdown-content mt-2 z-[1] shadow bg-base-100 rounded-box w-96 h-96"
           >
             {[...Array(items.length)].map((e, i) => {
               return (

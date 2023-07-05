@@ -3,7 +3,7 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="halloween" id="html">
+    <html lang="en" data-theme="night" id="html">
       <body className="min-h-screen max-w-screen">
         <Navbar />
         <div>{children}</div>
